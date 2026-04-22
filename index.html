@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SemihDev | Morse Telegraph Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <header>
+            <h1>MORSE PRO <span class="version">v2.1-ELITE</span></h1>
+            <p class="subtitle">ULTRA-FAST TELEGRAPH STATION</p>
+        </header>
+
+        <main>
+            <div class="display-panel">
+                <div class="signal-indicator" id="signalLamp"></div>
+                <div class="text-output" id="output">_</div>
+                <div class="morse-buffer" id="buffer"></div>
+            </div>
+
+            <div class="translator-panel">
+                <h3>METİN ÇEVİRİCİ</h3>
+                <div class="input-group">
+                    <input type="text" id="translateInput" placeholder="Mesajını buraya yaz...">
+                    <button id="playBtn">OYNAT 🔊</button>
+                </div>
+                <div id="translatedMorse" class="translated-morse">... . -- .. .... -.. . ...-</div>
+            </div>
+
+            <div class="controls">
+                <div class="telegraph-key-container">
+                    <button id="telegraphKey" class="telegraph-key">
+                        <span class="key-top">TAP</span>
+                        <span class="key-base"></span>
+                    </button>
+                    <p class="hint">SPACE TUŞUNA BAS VEYA TIKLA</p>
+                </div>
+
+                <div class="stats-panel">
+                    <div class="stat">
+                        <label>WPM</label>
+                        <span id="wpm">0</span>
+                    </div>
+                    <div class="stat">
+                        <label>STATUS</label>
+                        <span id="status" class="online">READY</span>
+                    </div>
+                    <button id="clearBtn" class="danger-btn">TEMİZLE</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="cheat-sheet">
+            <h3>REFERENCE TABLE</h3>
+            <div class="grid" id="refGrid"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
